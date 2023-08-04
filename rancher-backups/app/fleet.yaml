@@ -1,0 +1,18 @@
+defaultNamespace: cattle-resources-system
+helm:
+  repo: https://git.rancher.io/charts
+  version: "102.0.0+up3.1.0"
+  chart: rancher-backup
+  releaseName: rancher-backup
+  values:
+    image:
+      repository: registry.rancher.com/rancher/backup-restore-operator
+    s3:
+      bucketName: "rancher"
+      credentialSecretName: "rancher-backup-s3-secret"
+      credentialSecretNamespace: "cattle-resources-system"
+      enabled: true
+      endpoint: "s3.brynnharrison.com"
+      folder: "rancher-backups"
+      insecureTLSSkipVerify: false
+      region: "eu-west-2"

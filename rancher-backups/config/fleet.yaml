@@ -1,0 +1,3 @@
+defaultNamespace: cattle-resources-system
+helm:
+  releaseName: rancher-backups-config
