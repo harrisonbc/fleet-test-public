@@ -36,11 +36,19 @@ targetCustomizations:
       management.cattle.io/cluster-display-name: rke-prod
 - name: local
   helm:
-    repo: https://susemanager.suse/pub/helm
+    repo: https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner
     version: "4.0.18"
     valuesFiles:
     - local-nfs-subdir-external-provisioner-values.yaml 
   clusterSelector:
     matchLabels:
       management.cattle.io/cluster-display-name: local
-
+- name: rmc-harvester
+  helm:
+    repo: https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner
+    version: "4.0.18"
+    valuesFiles:
+    - rmc-harvester-nfs-subdir-external-provisioner-values.yaml 
+  clusterSelector:
+    matchLabels:
+      management.cattle.io/cluster-display-name: rmc-rancher
