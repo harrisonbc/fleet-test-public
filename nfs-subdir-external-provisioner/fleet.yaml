@@ -1,3 +1,0 @@
-defaultNamespace: nfs-subdir-external-provisioner
-helm:
-  releaseName: nfs-subdir-external-provisioner-fleet
