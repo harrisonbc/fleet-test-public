@@ -9,4 +9,4 @@ helm:
       server: 192.168.1.15
       path: /mnt/user/pvs
   valuesFiles:
-    values.yaml
+    - values.yaml
