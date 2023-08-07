@@ -6,43 +6,6 @@ helm:
   releaseName: nfs-subdir-external-provisioner
 
 targetCustomizations:
-- name: rke-test
-  helm:
-    repo: https://susemanager.suse/pub/helm
-    version: "4.0.18"
-    valuesFiles:
-    - rke-test-nfs-subdir-external-provisioner-values.yaml 
-  clusterSelector:
-    matchLabels:
-      management.cattle.io/cluster-display-name: rke-test
-- name: rke-int
-  helm:
-    repo: https://susemanager.suse/pub/helm
-    version: "4.0.18"
-    valuesFiles:
-    - rke-int-nfs-subdir-external-provisioner-values.yaml 
-  clusterSelector:
-    matchLabels:
-      management.cattle.io/cluster-display-name: rke-int
-      stage: rke-int
-- name: rke-prod
-  helm:
-    repo: https://susemanager.suse/pub/helm
-    version: "4.0.18"
-    valuesFiles:
-    - rke-prod-nfs-subdir-external-provisioner-values.yaml 
-  clusterSelector:
-    matchLabels:
-      management.cattle.io/cluster-display-name: rke-prod
-- name: local
-  helm:
-    repo: https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner
-    version: "4.0.18"
-    valuesFiles:
-    - local-nfs-subdir-external-provisioner-values.yaml 
-  clusterSelector:
-    matchLabels:
-      management.cattle.io/cluster-display-name: local
 - name: rmc-harvester
   helm:
     repo: https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner
