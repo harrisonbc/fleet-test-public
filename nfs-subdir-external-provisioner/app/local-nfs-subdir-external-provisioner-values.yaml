@@ -8,8 +8,8 @@ image:
 imagePullSecrets: []
 
 nfs:
-  server: infrastructure01.suse
-  path: /srv/nfs/rancher
+  server: 192.168.1.15
+  path: /mnt/user/pvs
   mountOptions:
   volumeName: nfs-subdir-external-provisioner-root
   # Reclaim policy for the main nfs volume
