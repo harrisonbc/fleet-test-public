@@ -4,14 +4,5 @@ helm:
   version: "4.0.18"
   chart: nfs-subdir-external-provisioner
   releaseName: fleet-nfs-subdir-external-provisioner
-
-targetCustomizations:
-- name: rmc-harvester
-  helm:
-    repo: https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner
-    version: "4.0.18"
-    valuesFiles:
-    - rmc-harvester-nfs-subdir-external-provisioner-values.yaml 
-  clusterSelector:
-    matchLabels:
-      management.cattle.io/cluster-display-name: rmc-rancher
+  valuesFiles:
+    values.yaml
